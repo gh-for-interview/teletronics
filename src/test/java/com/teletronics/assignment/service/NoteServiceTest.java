@@ -2,7 +2,7 @@ package com.teletronics.assignment.service;
 
 import com.teletronics.assignment.model.Note;
 import com.teletronics.assignment.repository.NoteRepository;
-import com.teletronics.assignment.model.NoteDocument;
+import com.teletronics.assignment.model.dto.NoteDocument;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

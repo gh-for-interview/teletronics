@@ -1,5 +1,7 @@
-package com.teletronics.assignment.model;
+package com.teletronics.assignment.model.dto;
 
+import com.teletronics.assignment.model.Note;
+import com.teletronics.assignment.model.Tag;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

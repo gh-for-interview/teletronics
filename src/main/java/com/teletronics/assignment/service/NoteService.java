@@ -2,7 +2,7 @@ package com.teletronics.assignment.service;
 
 import com.teletronics.assignment.model.Note;
 import com.teletronics.assignment.model.Tag;
-import com.teletronics.assignment.model.UpdateNoteRequest;
+import com.teletronics.assignment.model.dao.UpdateNoteRequest;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.List;

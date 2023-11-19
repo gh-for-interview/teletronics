@@ -2,7 +2,7 @@ package com.teletronics.assignment.controller;
 
 import com.teletronics.assignment.model.Note;
 import com.teletronics.assignment.repository.NoteRepository;
-import com.teletronics.assignment.model.NoteDocument;
+import com.teletronics.assignment.model.dto.NoteDocument;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,10 +1,10 @@
 package com.teletronics.assignment.controller;
 
 import com.teletronics.assignment.model.Tag;
-import com.teletronics.assignment.model.CreateNoteRequest;
+import com.teletronics.assignment.model.dao.CreateNoteRequest;
 import com.teletronics.assignment.model.Note;
-import com.teletronics.assignment.model.NoteListResponse;
-import com.teletronics.assignment.model.UpdateNoteRequest;
+import com.teletronics.assignment.model.dao.NoteListResponse;
+import com.teletronics.assignment.model.dao.UpdateNoteRequest;
 import com.teletronics.assignment.service.NoteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

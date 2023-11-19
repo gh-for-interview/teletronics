@@ -1,4 +1,7 @@
-package com.teletronics.assignment.model;
+package com.teletronics.assignment.model.dao;
+
+import com.teletronics.assignment.model.Note;
+import com.teletronics.assignment.model.Tag;
 
 import java.time.LocalDate;
 import java.util.Optional;
