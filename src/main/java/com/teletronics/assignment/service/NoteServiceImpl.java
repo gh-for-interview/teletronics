@@ -54,7 +54,6 @@ public class NoteServiceImpl implements NoteService {
             .getContent()
             .stream()
             .map(NoteDocument::toNote)
-            .filter(note -> tag.isEmpty() || note.tag().equals(tag))
             .toList();
     }
 
