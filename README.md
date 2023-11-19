@@ -20,3 +20,5 @@
 `.github/workflows/gradle.yml` - CI config
 
 MongoDB is not included in resulting docker image
+
+Id is included to `Note` class as there is no constraints specified on uniqueness of given fields.
