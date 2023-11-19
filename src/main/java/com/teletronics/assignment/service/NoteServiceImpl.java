@@ -7,18 +7,17 @@ import com.teletronics.assignment.model.dao.UpdateNoteRequest;
 import com.teletronics.assignment.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
 import static java.util.Arrays.stream;
-import static java.util.Collections.emptyMap;
+import static java.util.Collections.emptyList;
 import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.toMap;
 
 @Service
 public class NoteServiceImpl implements NoteService {
@@ -57,11 +56,14 @@ public class NoteServiceImpl implements NoteService {
             .toList();
     }
 
-    public Map<String, Integer> getStats(UUID id) {
+    public List<Pair<String, Integer>> getStats(UUID id) {
         return noteRepository
             .findById(id)
             .map(note -> stream(note.text().split(" ")).toList())
-            .map(list -> list.stream().collect(groupingBy(identity())).entrySet().stream().collect(toMap(Map.Entry::getKey, entry -> entry.getValue().size())))
-            .orElse(emptyMap());
+            .map(list -> list.stream().collect(groupingBy(identity())).entrySet().stream().map(entry -> Pair.of(entry.getKey(), entry.getValue().size())).toList())
+            .orElse(emptyList())
+            .stream()
+            .sorted((pair1, pair2) -> pair2.getSecond().compareTo(pair1.getSecond()))
+            .toList();
     }
 }

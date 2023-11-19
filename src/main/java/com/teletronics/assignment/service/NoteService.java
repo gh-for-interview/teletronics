@@ -4,9 +4,9 @@ import com.teletronics.assignment.model.Note;
 import com.teletronics.assignment.model.Tag;
 import com.teletronics.assignment.model.dao.UpdateNoteRequest;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.util.Pair;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -17,5 +17,5 @@ public interface NoteService {
     void updateNote(UUID id, UpdateNoteRequest request);
     void deleteNote(UUID id);
     List<Note> listNotes(PageRequest pageRequest, Optional<Tag> tag);
-    Map<String, Integer> getStats(UUID id);
+    List<Pair<String, Integer>> getStats(UUID id);
 }

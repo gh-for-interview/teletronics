@@ -8,6 +8,7 @@ import com.teletronics.assignment.model.dao.UpdateNoteRequest;
 import com.teletronics.assignment.service.NoteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.util.Pair;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,7 +53,7 @@ public class NoteController {
     }
 
     @GetMapping("/note/{id}/stats")
-    public Map<String, Integer> getStats(@PathVariable UUID id) {
+    public List<Pair<String, Integer>> getStats(@PathVariable UUID id) {
         return noteService.getStats(id);
     }
 

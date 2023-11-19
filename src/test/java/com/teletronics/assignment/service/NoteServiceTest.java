@@ -10,10 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.util.Pair;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
-import java.util.Map;
+import java.util.List;
 import java.util.Optional;
 
 import static java.util.UUID.randomUUID;
@@ -48,10 +49,10 @@ class NoteServiceTest {
 
     @Test
     void getsStats() {
-        var note = new Note(randomUUID(), "title", LocalDate.now(), "this is a note", Optional.empty());
+        var note = new Note(randomUUID(), "title", LocalDate.now(), "note is a note", Optional.empty());
         var document = NoteDocument.fromNote(note);
         given(repository.findById(note.id())).willReturn(Optional.of(document));
         var result = service.getStats(note.id());
-        assertThat(result).isEqualTo(Map.of("this", 1, "is", 1, "a", 1, "note", 1));
+        assertThat(result).isEqualTo(List.of(Pair.of("note", 2), Pair.of("a", 1), Pair.of("is", 1)));
     }
 }
