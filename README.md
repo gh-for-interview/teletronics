@@ -17,4 +17,6 @@
 ### About project
 `java/com/teletronics/test/TestApplication.java` - main class
 
+`.github/workflows/gradle.yml` - CI config
+
 MongoDB is not included in resulting docker image
