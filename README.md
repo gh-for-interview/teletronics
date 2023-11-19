@@ -5,3 +5,7 @@
 * `DELETE /note/{id}` - deletes note by id
 * `GET /note` - returns list of notes FIXME
 * `GET /note/{id}/stats` - returns word count in note by id
+
+### Commands
+`./gradlew buildImage` - build docker image
+`./gradlew test` - execute tests
