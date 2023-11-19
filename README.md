@@ -11,6 +11,7 @@
 
 ### Commands
 `./gradlew buildImage` - build docker image
+
 `./gradlew test` - execute tests
 
 ### About project
