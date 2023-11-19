@@ -1,0 +1,52 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.5'
+	id 'io.spring.dependency-management' version '1.1.3'
+	id 'com.bmuschko.docker-spring-boot-application' version '9.3.4'
+}
+
+import com.bmuschko.gradle.docker.tasks.image.*
+import com.bmuschko.gradle.docker.tasks.container.*
+
+group = "com.trt"
+version = "0.0.1-SNAPSHOT"
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.modelmapper:modelmapper:3.2.0")
+	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+task createDockerFile(type: Dockerfile) {
+	from "openjdk:17-alpine"
+	copyFile jar.archiveFileName.get(), "/app/test_service.jar"
+	entryPoint "java"
+	defaultCommand "-jar", "/app/test_service.jar"
+	exposePort 8080
+}
+
+task syncJar(type: Copy) {
+	dependsOn assemble
+	from jar.destinationDirectory
+	into "$buildDir/docker"
+}
+
+task buildImage(type: DockerBuildImage) {
+	dependsOn createDockerFile, syncJar
+	inputDir = createDockerFile.getDestDir()
+}
+
