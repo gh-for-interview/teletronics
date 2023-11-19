@@ -6,7 +6,6 @@ plugins {
 }
 
 import com.bmuschko.gradle.docker.tasks.image.*
-import com.bmuschko.gradle.docker.tasks.container.*
 
 group = "com.trt"
 version = "0.0.1-SNAPSHOT"
@@ -31,16 +30,23 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+jar {
+	manifest {
+		attributes(
+			'Main-Class': 'com.tlt.test.TestApplication'
+		)
+	}
+}
 task createDockerFile(type: Dockerfile) {
-	from "openjdk:17-alpine"
-	copyFile jar.archiveFileName.get(), "/app/test_service.jar"
+	from "eclipse-temurin:17.0.9_9-jre-ubi9-minimal"
+	copyFile bootJar.archiveFileName.get(), "/app/test_service.jar"
 	entryPoint "java"
 	defaultCommand "-jar", "/app/test_service.jar"
 	exposePort 8080
 }
 
 task syncJar(type: Copy) {
-	dependsOn assemble
+	dependsOn bootJar
 	from jar.destinationDirectory
 	into "$buildDir/docker"
 }
