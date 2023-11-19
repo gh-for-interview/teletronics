@@ -1,4 +1,4 @@
-package com.teletronics.test.model;
+package com.teletronics.assignment.model;
 
 import java.time.LocalDate;
 import java.util.UUID;

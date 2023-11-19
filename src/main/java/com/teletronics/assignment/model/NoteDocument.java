@@ -1,4 +1,4 @@
-package com.teletronics.test.model;
+package com.teletronics.assignment.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

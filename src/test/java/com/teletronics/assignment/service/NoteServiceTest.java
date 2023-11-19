@@ -1,8 +1,8 @@
-package com.teletronics.test.service;
+package com.teletronics.assignment.service;
 
-import com.teletronics.test.model.Note;
-import com.teletronics.test.repository.NoteRepository;
-import com.teletronics.test.model.NoteDocument;
+import com.teletronics.assignment.model.Note;
+import com.teletronics.assignment.repository.NoteRepository;
+import com.teletronics.assignment.model.NoteDocument;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,4 +1,4 @@
-package com.teletronics.test.model;
+package com.teletronics.assignment.model;
 
 public enum Tag {
     BUSINESS,

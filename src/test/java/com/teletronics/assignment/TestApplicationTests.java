@@ -1,4 +1,4 @@
-package com.teletronics.test;
+package com.teletronics.assignment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

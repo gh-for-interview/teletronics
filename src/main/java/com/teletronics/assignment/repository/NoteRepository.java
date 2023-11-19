@@ -1,7 +1,7 @@
-package com.teletronics.test.repository;
+package com.teletronics.assignment.repository;
 
-import com.teletronics.test.model.Tag;
-import com.teletronics.test.model.NoteDocument;
+import com.teletronics.assignment.model.Tag;
+import com.teletronics.assignment.model.NoteDocument;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;

@@ -1,11 +1,11 @@
-package com.teletronics.test.controller;
+package com.teletronics.assignment.controller;
 
-import com.teletronics.test.model.Tag;
-import com.teletronics.test.model.CreateNoteRequest;
-import com.teletronics.test.model.Note;
-import com.teletronics.test.model.NoteListResponse;
-import com.teletronics.test.model.UpdateNoteRequest;
-import com.teletronics.test.service.NoteServiceImpl;
+import com.teletronics.assignment.model.Tag;
+import com.teletronics.assignment.model.CreateNoteRequest;
+import com.teletronics.assignment.model.Note;
+import com.teletronics.assignment.model.NoteListResponse;
+import com.teletronics.assignment.model.UpdateNoteRequest;
+import com.teletronics.assignment.service.NoteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;
