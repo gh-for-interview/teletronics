@@ -36,7 +36,6 @@ public class NoteServiceImpl implements NoteService {
         return noteRepository.save(NoteDocument.fromNote(note)).toNote();
     }
 
-    @Override
     public void updateNote(UUID id, UpdateNoteRequest request) {
         noteRepository
             .findById(id)
