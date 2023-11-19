@@ -1,13 +1,11 @@
-package com.tlt.test.model;
+package com.teletronics.test.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
-import java.util.Optional;
 import java.util.UUID;
 
-import static java.util.Optional.empty;
 import static java.util.Optional.ofNullable;
 
 @Document(collection="notes")

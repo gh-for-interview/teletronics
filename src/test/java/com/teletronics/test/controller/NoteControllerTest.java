@@ -1,8 +1,8 @@
-package com.tlt.test.controller;
+package com.teletronics.test.controller;
 
-import com.tlt.test.model.Note;
-import com.tlt.test.model.NoteDocument;
-import com.tlt.test.repository.NoteRepository;
+import com.teletronics.test.model.Note;
+import com.teletronics.test.repository.NoteRepository;
+import com.teletronics.test.model.NoteDocument;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

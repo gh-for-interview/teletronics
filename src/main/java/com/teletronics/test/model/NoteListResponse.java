@@ -1,4 +1,4 @@
-package com.tlt.test.model;
+package com.teletronics.test.model;
 
 import java.time.LocalDate;
 import java.util.UUID;

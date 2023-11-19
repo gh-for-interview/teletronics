@@ -1,8 +1,9 @@
-package com.tlt.test.service;
+package com.teletronics.test.service;
 
-import com.tlt.test.model.Note;
-import com.tlt.test.model.NoteDocument;
-import com.tlt.test.repository.NoteRepository;
+import com.teletronics.test.model.Note;
+import com.teletronics.test.repository.NoteRepository;
+import com.teletronics.test.model.NoteDocument;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ class NoteServiceTest {
         var document = NoteDocument.fromNote(note);
         given(repository.save(document)).willReturn(document);
         var result = service.createNote(note);
-        assertThat(result).isEqualTo(note);
+        Assertions.assertThat(result).isEqualTo(note);
     }
 
     @Test

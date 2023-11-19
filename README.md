@@ -9,3 +9,8 @@
 ### Commands
 `./gradlew buildImage` - build docker image
 `./gradlew test` - execute tests
+
+### About project
+`java/com/teletronics/test/TestApplication.java` - main class
+
+MongoDB is not included in resulting docker image

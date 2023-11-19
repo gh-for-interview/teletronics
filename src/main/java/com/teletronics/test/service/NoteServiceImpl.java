@@ -1,10 +1,10 @@
-package com.tlt.test.service;
+package com.teletronics.test.service;
 
-import com.tlt.test.model.Note;
-import com.tlt.test.model.NoteDocument;
-import com.tlt.test.model.Tag;
-import com.tlt.test.model.UpdateNoteRequest;
-import com.tlt.test.repository.NoteRepository;
+import com.teletronics.test.model.Note;
+import com.teletronics.test.model.Tag;
+import com.teletronics.test.model.NoteDocument;
+import com.teletronics.test.model.UpdateNoteRequest;
+import com.teletronics.test.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;

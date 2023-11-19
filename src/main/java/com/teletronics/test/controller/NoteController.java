@@ -1,11 +1,11 @@
-package com.tlt.test.controller;
+package com.teletronics.test.controller;
 
-import com.tlt.test.model.CreateNoteRequest;
-import com.tlt.test.model.Note;
-import com.tlt.test.model.NoteListResponse;
-import com.tlt.test.model.Tag;
-import com.tlt.test.model.UpdateNoteRequest;
-import com.tlt.test.service.NoteServiceImpl;
+import com.teletronics.test.model.Tag;
+import com.teletronics.test.model.CreateNoteRequest;
+import com.teletronics.test.model.Note;
+import com.teletronics.test.model.NoteListResponse;
+import com.teletronics.test.model.UpdateNoteRequest;
+import com.teletronics.test.service.NoteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;

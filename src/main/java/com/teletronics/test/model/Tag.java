@@ -1,4 +1,4 @@
-package com.tlt.test.model;
+package com.teletronics.test.model;
 
 public enum Tag {
     BUSINESS,

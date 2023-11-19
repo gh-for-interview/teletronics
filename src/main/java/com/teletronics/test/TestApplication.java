@@ -1,4 +1,4 @@
-package com.tlt.test;
+package com.teletronics.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

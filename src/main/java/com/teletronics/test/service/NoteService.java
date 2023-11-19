@@ -1,8 +1,8 @@
-package com.tlt.test.service;
+package com.teletronics.test.service;
 
-import com.tlt.test.model.Note;
-import com.tlt.test.model.Tag;
-import com.tlt.test.model.UpdateNoteRequest;
+import com.teletronics.test.model.Note;
+import com.teletronics.test.model.Tag;
+import com.teletronics.test.model.UpdateNoteRequest;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
